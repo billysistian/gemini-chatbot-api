@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-indigo-50 via-slate-50 to-blue-100 h-screen flex items-center justify-center p-0 sm:p-4 font-sans text-gray-800 selection:bg-blue-200">
+
+    <!-- Kontainer Chat Utama -->
+    <div class="w-full h-full sm:h-[90vh] sm:max-w-3xl bg-white sm:rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-gray-100">
+        
+        <!-- Header -->
+        <div class="bg-white px-6 py-4 border-b border-gray-100 flex items-center shadow-sm z-10">
+            <!-- Ikon Bot -->
+            <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-white mr-4 shadow-md">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+            </div>
+            <div>
+                <h1 class="text-lg font-bold text-gray-800">Gemini Chatbot AI</h1>
+                <p class="text-xs text-green-500 font-medium flex items-center mt-0.5">
+                    <span class="w-2 h-2 rounded-full bg-green-500 mr-1.5 animate-pulse"></span> Online
+                </p>
+            </div>
+        </div>
+
+        <!-- Area Pesan (Chat Box) -->
+        <div id="chat-box" class="flex-1 overflow-y-auto p-4 sm:p-6 space-y-5 bg-slate-50/50 scroll-smooth">
+            <!-- Pesan Pembuka dari Bot -->
+            <div class="flex justify-start">
+                <div class="bg-white border border-gray-100 text-gray-700 px-5 py-3.5 rounded-2xl rounded-tl-sm shadow-sm max-w-[85%] sm:max-w-[75%] text-sm sm:text-base leading-relaxed">
+                    Halo! Saya adalah asisten AI Anda. Ada yang bisa saya bantu hari ini?
+                </div>
+            </div>
+        </div>
+
+        <!-- Area Input -->
+        <div class="p-3 sm:p-4 bg-white border-t border-gray-100">
+            <form id="chat-form" class="flex gap-2 relative items-end">
+                <div class="relative flex-1">
+                    <input type="text" id="user-input" autocomplete="off" placeholder="Ketik pesan Anda di sini..." 
+                           class="w-full bg-gray-50 border border-gray-200 text-gray-800 text-sm sm:text-base rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 block p-3.5 sm:p-4 pr-12 transition-all shadow-inner outline-none" required />
+                </div>
+                <button type="submit" id="send-btn" 
+                        class="bg-blue-600 hover:bg-blue-700 text-white rounded-2xl p-3.5 sm:p-4 transition-all flex-shrink-0 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed group">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6 transform group-hover:scale-110 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
