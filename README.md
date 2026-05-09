@@ -57,5 +57,5 @@ Sebelum menjalankan proyek ini, pastikan Anda telah menginstal:
 ## Screenshot
 
 <p align="center">
-  <img src="public/img/gemini-chatbot-api.png" width="100%">
+  <img src="public/img/gemini-chatbot-ai.png" width="100%">
 </p>
